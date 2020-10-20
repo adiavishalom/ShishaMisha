@@ -1,0 +1,79 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial';
+}
+
+.mainMenu {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+    padding: 5px;
+}
+
+nav ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    white-space: nowrap;
+}
+
+nav .mainMenu>li{
+    display: inline-block;
+    
+}
+
+.mainMenu>li>a{
+    margin: 0px;
+    text-align: left;
+    padding: 12px 15px 12px 15px;
+    color: white;
+    background: inherit;
+    text-decoration: none;
+    position: relative;
+    display :block;
+    text-align: center;
+}
+
+nav .mainMenu>li:hover>a{
+    background: red;
+    cursor: pointer;
+}
+
+nav .subMenu, nav .super-subMenu, nav .super-super-subMenu{
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .subMenu a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav .subMenu a:hover{
+    background-color: #ddd;
+
+}
+
+nav .subMenu li, nav .super-subMenu li{
+    position: relative;
+}
+
+nav .super-subMenu, nav .super-super-subMenu{
+    top: 0;
+    right: 0;
+    transform: translate(100%,0);
+}
+
+nav .mainMenu>li:hover .subMenu, nav .subMenu>li:hover>.super-subMenu, nav .super-subMenu>li:hover>.super-super-subMenu{
+    display: block;
+}
+

@@ -28,6 +28,11 @@
     overflow: hidden;
   }
   
+  .dropdown .droplink{
+    background-color: inherit;
+    margin: 0
+  }
+
   /* Dropdown button */
   .dropdown .dropbtn {
     font-size: 16px;
